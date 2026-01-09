@@ -172,6 +172,18 @@
   </div>
 
 <script>
+  // Esto limpia el formulario si el usuario vuelve atrás con la flecha del navegador
+  window.onpageshow = function(event) {
+    const form = document.getElementById('acvForm');
+    const btn = document.getElementById('submitBtn');
+    if (form) form.reset();
+    if (btn) {
+      btn.innerText = "Evaluar Riesgo";
+      btn.disabled = false;
+      btn.style.opacity = "1";
+    }
+  };
+
   document.getElementById('acvForm').addEventListener('submit', function(e) {
     const btn = document.getElementById('submitBtn');
     btn.innerText = "Calculando con IA...";
@@ -179,7 +191,7 @@
     btn.style.opacity = "0.7";
   });
 </script>
-
 </body>
 </html>
+
 
