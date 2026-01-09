@@ -185,6 +185,15 @@
       </div>
     </div>
   </div>
-
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+  // Aquí podrías añadir una lógica de cálculo simple si no deseas esperar al webhook
+  const button = e.target.querySelector('button');
+  button.innerText = "Procesando datos...";
+  button.style.opacity = "0.7";
+  button.disabled = true;
+});
+</script>
 </body>
+
 </html>
