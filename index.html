@@ -133,6 +133,9 @@
       <h1>Riesgo de ACV</h1>
 
       <form id="acvForm" method="POST" action="https://n8n-shh7.onrender.com/webhook/acv">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">  
+        
         <label for="age">Edad</label>
         <input type="number" id="age" name="age" required min="1" max="120" placeholder="Ej: 45">
 
@@ -193,5 +196,6 @@
 </script>
 </body>
 </html>
+
 
 
